@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+   --color1:#114b5f;
+   --color1shade1:#0f4355;
+   --color1shade2:#135369;
+   --backgroundcolor:#63AABC;
+   --color2:#020122;
+   --color3:#60204B;
+   --color4:#C4C4C4;
+   --color5:#E5E5E5;
+   --color6:#ED3833;
+
+   
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+    
+
+.page1{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundcolor);
+    position: absolute;
+    z-index: 20;
+    display:grid;
+    place-items: center;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    
+    
+   
+    
+
+    
+    
+    
+}
+.startmenubox{
+    width: 70vh;
+    height: 90vh;
+    border: var(--color2) 5px solid;
+    background-color: var(--color5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.startmenubox>h1{
+    margin-top: 30%;
+    font-size: 7vh;
+    text-align: center;
+    line-height: 70px;
+    color: var(--color3);
+    
+}
+.lower{
+ animation: lower 1s forwards;
+      
+}
+
+@keyframes lower{
+    to{
+       margin-top: 0;
+    }
+}
+
+.howmany{
+    font-size: 150%;
+    
+    
+
+}
+.small{
+   animation: small 1s forwards; 
+}
+@keyframes small{
+    to{
+        font-size: 120%;
+    }
+}
+
+
+.numofplayer{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+    width: 10%;
+    height: 10%;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    
+}
+label{
+    height: 100%;
+}
+
+ /* Hide the browser's default radio button */
+.radio input {
+opacity: 0;
+
+}
+.radio span{
+    font-size: 100%;
+}
+
+ /* Create a custom radio button */
+.checkmark {
+display: grid;
+place-items: center;
+height: 50px;
+width: 50px;
+margin: 1rem;
+background-color: var(--color4);
+border-radius: 5px;
+color: white;
+}
+
+
+ /* On mouse-over, add a grey background color */
+.radio:hover input ~ .checkmark {
+background-color: var(--backgroundcolor);
+}
+
+ /* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkmark {
+background-color: var(--backgroundcolor);
+}
+.setplayername{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 35%;
+    border-radius: 30px;
+    font-size: 100%;
+}
+.setplayername>div{
+    background-color: var(--color5);
+    width: 25%;
+    height: 100%;
+    margin: 2%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--color3)  3px solid ;
+    border-radius: 10px;
+    justify-content: center;
+    animation: reverse .5s taller;
+
+}
+@keyframes taller{
+    to{
+        height: 0;
+        width: 0;
+        
+    }
+
+}
+.setplayername img{
+    width: 100%;
+    border: black 2px solid;
+    border-radius: 50%;
+    margin: 10px;
+}
+.setplayername input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+.setplayername input:checked{
+    border: tomato;
+}
+#startgame{
+ 
+    width: 40%;
+    height: 8vh;
+    position: absolute;
+    margin-top: 70vh;
+    background-color: var(--color6);
+    border: 2px var(--color2) solid;
+    border-radius: 10px;
+    
+}
+
+  
+
+
+.page2{
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--backgroundcolor);
+    z-index: 2;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    
+    
+
+    
+    
+}
+.page2box{
+    width: max-content;
+    height: max-content;
+    border: 3px solid var(--color2);
+    border-radius: 10px;
+    display: flex;
+    background-color:var(--color5);
+   
+}
+.gamebox{
+    margin: 10px 20px;
+   width: 85vh;
+   height: 85vh;
+   display: grid;
+   place-items: center;
+   border-radius: 10px;
+    
+}
+.map{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    place-items: center;
+    background-image: url(images/snake\ map.png);
+    background-size: contain;
+    border: 4px solid var(--color2);
+    border-radius: 5px;
+    
+
+ 
+    
+}
+.map>div{
+    
+    width: 100%;
+    height: 100%;
+    display: grid;
+   
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    
+   
+    
+
+}
+.map img{
+    width: 25px;
+
+}
+.userbox{
+    background:var(--color5);
+    display: flex;
+    flex-direction: column;
+    width: 13vw;
+    height: 85vh;
+    justify-content: space-between;
+    margin: 10px 10px 10px 0;
+
+}
+
+.dicebox{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color4);
+    align-items: center;
+    justify-content: center;
+}
+#total{
+    width: 100%;
+    height: 17%;
+    background-color: var(--color3);
+    color: white;
+    padding: 10px;
+    font-size: 2vh;
+    text-align: center;
+    
+
+}
+.playerbox{
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr ;
+    background-color: var(--color5);
+    border: var(--color2) 2px solid;
+    
+
+}
+
+
+.background{
+    background: linear-gradient(308deg,var(--backgroundcolor),var(--color6),var(--color3));
+    background-size: 600% 600%;
+    animation: backgrounds 6s ease infinite;
+    border-radius: 60px;
+   
+}
+@keyframes backgrounds {
+    0%{background-position:0% 65%}
+    50%{background-position:300% 37%}
+    100%{background-position:0% 65%}
+}
+.playerbox p{
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 800;
+    color: black;
+    display: grid;
+  
+
+}
+
+.playerbox div{
+   /* background-color: rgb(96, 180, 116);*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    background-color: var(--color5);
+}
+.playerbox img{
+    width: 80%;
+    border-radius: 50%;
+}
+
+
+.dicebox{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 30%;
+
+}
+.container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container>img{
+    width: 45%;
+}
+
+.dicebutton{
+    width: 90%;
+    height: 30%;
+    background-color: var(--color6);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 75%;
+    display: grid;
+    place-items: center;
+    font-size: 80%;
+    color: var(--color5);
+    font-weight: 600;
+}
+.shake{
+    animation: shake 0.5s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: rotate(8deg);
+    }
+    50%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(8deg);
+    }
+}
+
+.pageend{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(250, 249, 249, 0.308);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+   
+
+}
+.endbox{
+    width: 40vw;
+    height: 70vh;
+    background-color:var(--color5);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    border: 5px solid var(--color2);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.leaderboard{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leaderboard>img{
+    width: 40%;
+}
+.leaderboard>div{
+    width: 100%;
+    height: 14%;
+    background-color: var(--color5);
+    border:2px solid var(--color2);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+}
+.leaderboard .no1{
+    background-color: var(--backgroundcolor);
+}
+h2{
+    font-size:5vh;
+}
+
+.endbox>button{
+    width: 50%;
+    height: 10%;
+    margin-bottom: 20px;
+    background-color: var(--color6);
+    border: none;
+    border-radius: 5px;
+    font-size: 2vh;
+    color: var(--color5);  
+}
+#anotherround{
+    background-color: var(--color3);
+}
+
+@media (max-width:500px) {
+    
+    .startmenubox{
+        width: 80vw;
+        height: 70vh;
+    }
+    
+    .setplayername>div{
+        width: 100px;
+        height: 200px;
+
+    }
+    
+    .page2box{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        
+
+    }
+    #startgame{
+        margin-top: 550px;
+        height: 50px;
+    }
+   
+   .gamebox{
+       border: none;
+       margin: 0;
+       height: 89vw;
+       width: 89vw;
+       
+   }
+   .map>div img{
+       width: 100%;
+   }
+   
+   .userbox{
+       width: 90vw;
+       height: 20vh;
+       background-color: transparent;
+       
+   }
+   .playerbox{
+       display: flex;
+       height: 80px;
+       width: 100%;
+   }
+   .playerbox>div{
+       height: 100%;
+       width: 25%;
+   }
+   #total{
+       height: 40px;
+       font-size: 1rem;
+   }
+   .playerbox img{
+       width: 40px;
+   }
+   .dicebox{
+       background-color: transparent;
+
+   }
+   .dicebox img{
+       width: 50px;
+       
+   }
+   .dicebutton{
+       font-size: .7rem;
+       font-weight: 200;
+       height: 20px;
+   }
+   .endbox{
+       width: 80vw;
+   }
+   .leaderboard{
+       width: 80%;
+   }
+    
+}
+   
+.remove{
+    display: none;
+}
