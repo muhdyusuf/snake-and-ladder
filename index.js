@@ -13,14 +13,14 @@ function shuffle(array) {
 let playerArray=[
   {name:"",
     images:"images/download(1).jpg",
-    currentPosition:96,
+    currentPosition:1,
     moveleft:0,
     isplayerstillplaying:true
 
   },
   { name:"",
     images:"images/download(2).jpg",
-    currentPosition:96,
+    currentPosition:1,
     moveleft:0,
     isplayerstillplaying:true
 
@@ -412,7 +412,7 @@ function startgame(){
           document.querySelector("#dice1").setAttribute("src", `images/${images[diceOneValue]}`);
           document.querySelector("#dice2").setAttribute("src", `images/${images[diceTwoValue]}`);
           document.querySelector("#total").innerHTML = "Your roll is " + ( (diceOneValue +1) + (diceTwoValue + 1) );
-          dicetotal=[3,1]
+         
           playerArray[currentplayer].moveleft=dicetotal[0]+dicetotal[1]
           document.getElementById('dicebutton').disabled=true
           move(currentplayer)
