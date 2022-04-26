@@ -532,9 +532,11 @@ h2{
        width: 89vw;
        
    }
-   .map>div img{
+   .gamebox>map{
        width: 100%;
+       aspect-ratio: 1/1;
    }
+ 
    
    .userbox{
        width: 90vw;
@@ -569,7 +571,7 @@ h2{
    .dicebutton{
        font-size: .7rem;
        font-weight: 200;
-       height: 20px;
+       height: 40px;
    }
    .endbox{
        width: 80vw;
