@@ -60,7 +60,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+   
 
 }
 .startmenubox>h1{
@@ -127,7 +127,7 @@ display: grid;
 place-items: center;
 height: 50px;
 width: 50px;
-margin: 1rem;
+margin: 0 .5rem;
 background-color: var(--color4);
 border-radius: 5px;
 color: white;
@@ -476,17 +476,40 @@ h2{
     background-color: var(--color3);
 }
 
-@media (max-width:500px) {
+@media (max-width:568px) {
     
-    .startmenubox{
-        width: 80vw;
-        height: 70vh;
+    .startmenubox>h1{
+        margin: 0;
+        line-height: 3rem;
+        font-size: 3rem;
+        text-align: center;
+        color: var(--color3);
+        
     }
-    
+    .numofplayer{
+        margin-top: 1rem;
+    }
+    .startmenubox{
+      height: 100%;
+      width: 100%;
+      display: flex;
+    }
+    .startmenubox>:last-child{
+        position: relative;
+    }
+    .setplayername{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
     .setplayername>div{
         width: 100px;
-        height: 200px;
-
+        height: 100px;
+        max-width: 50%;
+    }
+    .setplayername>div>img{
+        display: none;
     }
     
     .page2box{
@@ -560,3 +583,4 @@ h2{
 .remove{
     display: none;
 }
+
